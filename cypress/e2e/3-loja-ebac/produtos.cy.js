@@ -1,17 +1,15 @@
 ///<reference types="cypress"/>
 import { faker } from '@faker-js/faker';
+import produtosPage from '../../support/page-objects/produtos.page';
 
 describe('Funcionalidade: Produtos', () => {
 
 beforeEach(() => {
-    cy.visit('produtos/')
+    produtosPage.visitarUrl()
 });
 
     it('Deve selecionar um produto da lista', () => {
-        cy.get('.product-block')
-            .contains('Apollo Running Short')
-            .click()
-            cy.get('#tab-title-description > a').should('contain','Descrição')
+        produtosPage.buscarProdutoLista('Aether Gym Pant')
     });
     it('Deve selecionar o terceiro produto da lista', () => {
         cy.get('.product-block')
@@ -28,4 +26,18 @@ beforeEach(() => {
             .first()
             .click()
     });
+
+    it.only('Deve buscar um produto com sucesso', () => {
+        let produto = 'Abominable Hoodie'
+        produtosPage.buscarProduto(produto)
+        cy.get('.product_title').should('contain', produto)
+    })
+
+    it('Deve visitar a página do produto', () => {
+        
+    })
+
+    it('Deve adicionar o produto ao carrinho', () => {
+        
+    })
 });
