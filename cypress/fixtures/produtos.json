@@ -1,0 +1,20 @@
+[
+    {
+        "nomeProduto": "Cassius Sparring Tank",
+        "tamanho": "L",
+        "cor": "Blue",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Sparta Gym Tank",
+        "tamanho": "XS",
+        "cor": "Green",
+        "quantidade": 4
+    },
+    {
+        "nomeProduto": "Abominable Hoodie",
+        "tamanho": "XL",
+        "cor": "Red",
+        "quantidade": 3
+    }
+]
