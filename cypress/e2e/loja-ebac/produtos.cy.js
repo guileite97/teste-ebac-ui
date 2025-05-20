@@ -45,7 +45,7 @@ beforeEach(() => {
         cy.get('.woocommerce-message').should('contain', qtd + ' × “Cassius Sparring Tank” foram adicionados no seu carrinho.')
     })
 
-    it.only('Deve adicionar o produto ao carrinho buscando da massa de dados', () => {
+    it('Deve adicionar o produto ao carrinho buscando da massa de dados', () => {
         cy.fixture('produtos').then(dados => {
         produtosPage.buscarProduto(dados[2].nomeProduto)
         produtosPage.addProdutoCarrinho(
